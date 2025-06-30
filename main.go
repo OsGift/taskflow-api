@@ -75,12 +75,7 @@ func main() {
 	// Define allowed origins. For production, replace "http://localhost:5173"
 	// with your actual deployed frontend URL (e.g., "https://your-frontend.com").
 	// You can also read this from an environment variable.
-	corsOrigins := []string{
-		"http://localhost:5173", // Your frontend's development server
-		"http://127.0.0.1:5173", // Another common localhost variant
-		// Add your deployed frontend URL here when you deploy it:
-		// "https://your-deployed-frontend-url.com",
-	}
+	corsOrigins := []string{"*"}
 
 	// If you have a CORS_ALLOWED_ORIGINS environment variable (comma-separated), use it
 	if envOrigins := os.Getenv("CORS_ALLOWED_ORIGINS"); envOrigins != "" {
