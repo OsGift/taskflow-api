@@ -1,0 +1,5 @@
+# .gitignore
+.env
+*.exe
+*.bin
+/vendor/
